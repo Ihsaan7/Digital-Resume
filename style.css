@@ -539,3 +539,11 @@
         white calc(var(--rating) * 10%));
     -webkit-background-clip: text;
 }
+
+@media screen and (max-width: 768px) 
+{
+    .container
+    {
+        height: 1350px;
+    }
+ 
