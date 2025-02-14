@@ -1,0 +1,249 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: aqua;
+    
+}
+
+.container
+{
+
+    border: 1px solid black;
+    margin: 4% auto;
+    width:800px;
+    height:750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: ; */
+}
+
+.section
+{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height:95%;
+}
+
+/* ----------------------------- LEFT SECTION starts ------------------------------------- */
+.secL
+{
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 33%;
+}
+
+
+.Lrounds
+{
+    border: 1px solid black;
+    padding: 20px;
+    width: 160px;
+    height: 150px;
+    margin: 10px 10px 10px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: -10px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-self: end;
+
+}
+.LroundedTop
+{
+    /* margin-left: 60%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+
+}
+.LroundedTop p
+{
+    font-size: 1em;
+}
+.LroundedTop span
+{
+    font-size: 0.8em;
+}
+
+
+.Lrounded1
+{
+    /* padding-bottom:3% ; */
+    padding: 5px;
+    margin-top: 20%;
+    width: fit-content;
+    height: fit-content;
+}
+.Lrounded1 p
+{
+    font-size: 0.9em;
+    padding: 10px 10px 0px 10px;
+    word-spacing: 6px;
+    line-height: 20px;
+}
+.Lrounded2
+{
+    margin-top:50%;
+    width: fit-content;
+    height: fit-content;
+}
+.Lrounded2 p
+{
+    font-size: 0.7em;
+    padding: 5px 10px 5px 10px;
+
+}
+
+
+.Lrounded3
+{
+    margin-top: 15%;
+    width: fit-content;
+    height: fit-content;
+    padding: 7px;
+}
+.Lrounded3 p
+{
+    font-size: 0.8em;
+}
+
+/* ----------------------------- LEFT SECTION ends ------------------------------------- */
+/* ----------------------------- MIDDLE SECTION starts ------------------------------------- */
+.secM
+{
+    /* font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal; */
+    /* border: 1px solid black; */
+    /* width: 34%;    */
+    /* ADD some CSS that the text will auto fill the width all the text should be of same width like in picture    */
+    /* height: 100%;
+    font-size: 2.5em;
+    text-align: center;
+    border: 1px solid black; */
+    border: 1px solid black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Distributes the space between elements */
+    align-items: center; /* Centers the elements horizontally */
+    padding: 10px; /* Adjust the padding as needed */
+    text-align:     
+
+}
+
+.name , .detail , .career , .skill , .tech , .contact
+{
+    
+        font-size: 2.5em;
+        width: 100%
+}
+
+.name span, .details span, .career span, .skill span, .tech span, .contact
+{
+
+    
+        font-size: 1.5em;
+        width: 100%
+}
+
+
+/* ----------------------------- MIDDLE SECTION end ------------------------------------- */
+/* ----------------------------- RIGHT SECTION start ------------------------------------- */
+
+.secR
+{
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 33%;
+    
+}
+.Rrounds
+{
+    /* padding: 20px; */
+    border: 1px solid black;
+    width: 160px;
+    height: 150px;
+    margin: 10px 10px 10px 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: -10px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-self: end;
+
+}
+.RroundedTop
+{
+    background: url(./MyPics/WhatsApp\ Image\ 2025-02-13\ at\ 18.58.40_f0752523.jpg);
+    display: flex;
+    justify-self: start;
+    width:150px;
+    height: 120px;
+    padding: 10px;
+    background-size: cover;
+    /* background-position:; */
+
+}
+.RroundedTop p
+{
+    font-size: 1em;
+}
+
+
+.Rrounded1
+{
+    margin-top: 20%;
+    padding-bottom:3% ;
+    width: fit-content;
+    height: fit-content;
+}
+.Rrounded1 p
+{
+    /* word-spacing: 6px; */
+    font-size: 0.8em;
+    padding: 10px 10px 0px 10px;
+    line-height: 17px;
+}
+
+
+.Rrounded2
+{
+    margin-top:30%;
+    width: fit-content;
+    height: fit-content;
+    margin-right:80px;
+}
+.Rrounded2 p
+{
+    font-size: 0.7em;
+    padding: 5px 10px 5px 10px;
+
+}
+
+
+.Rrounded3
+{
+    margin-top: 50%;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+}
+.Rrounded3 p
+{
+    line-height: 20px;
+    font-size: 0.8em;
+}
+/* ----------------------------- RIGHT SECTION end ------------------------------------- */
+

@@ -1,0 +1,598 @@
+Modern Reset and Variables
+:root {
+    --primary-blue: #7FB2D9;
+    --secondary-purple: #9B8B9F;
+    --text-dark: #333333;
+    --background: #ffffff;
+    --gray-light: #f5f5f5;
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 800px;
+    height: 800px;
+    margin: 2rem auto;
+    background: var(--background);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Header Section */
+  .name-header {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    background: var(--primary-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .name-header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  
+  /* Main Content Layout */
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  /* Left Section */
+  .secL {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .Lrounds {
+    background: var(--gray-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .Lrounds::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-blue);
+    transform: translateY(-50%) rotate(45deg);
+  }
+  
+  /* Middle Section - Headers */
+  .secM {
+    grid-column: 5 / 8;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .secM p {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--primary-blue);
+    font-weight: 700;
+    position: relative;
+  }
+  
+  .secM span {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-dark);
+  }
+  
+  /* Right Section */
+  .secR {
+    grid-column: 8 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .Rrounds {
+    background: var(--gray-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  /* Skills Rating System */
+  .skill-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skill-rating::after {
+    content: '';
+    flex-grow: 1;
+    height: 6px;
+    background: #ddd;
+    border-radius: 3px;
+  }
+  
+  .skill-rating[data-level="5"]::after {
+    background: linear-gradient(90deg, var(--primary-blue) 100%, #ddd 0%);
+  }
+  
+  .skill-rating[data-level="4"]::after {
+    background: linear-gradient(90deg, var(--primary-blue) 80%, #ddd 0%);
+  }
+  
+  .skill-rating[data-level="3"]::after {
+    background: linear-gradient(90deg, var(--primary-blue) 60%, #ddd 0%);
+  }
+  
+  /* Contact Section */
+  .contact-info {
+    margin-top: auto;
+    background: var(--primary-blue);
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .contact-info p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 850px) {
+    .container {
+      width: 95%;
+      height: auto;
+    }
+    
+    .section {
+      grid-template-columns: 1fr;
+    }
+    
+    .secL, .secM, .secR {
+      grid-column: 1 / -1;
+      padding: 1rem;
+    }
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .Lrounds, .Rrounds {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+  
+  .secL { animation-delay: 0.2s; }
+  .secM { animation-delay: 0.4s; }
+  .secR { animation-delay: 0.6s; }
+
+
+
+  /* ====================================================================================================================
+  ====================================================================================================================
+  ====================================================================================================================
+  ====================================================================================================================
+  ====================================================================================================================
+  ====================================================================================================================
+  ====================================================================================================================
+  ====================================================================================================================
+  ====================================================================================================================
+  ====================================================================================================================
+  ==================================================================================================================== */
+
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: aqua;
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.container
+{
+    margin: 4% auto;
+    border: 1px solid black;
+    width:800px;
+    height:750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 95%;
+    height:95%;
+}
+
+/* ----------------------------- LEFT SECTION starts ------------------------------------- */
+.secL
+{
+    border: 1px solid black;
+    height: 100%;
+    width: 33%;
+}
+
+
+.Lrounds {
+    border: 1px solid black;
+    width: 160px;
+    height: 150px;
+    margin: 10px 20px 10px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-self: end;
+    position: relative;
+}
+
+.Lrounds::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -20px; /* Adjust this value to control the length of the point */
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid black; /* Adjust this value to control the width of the point */
+}
+.LroundedTop
+{
+    /* margin-left: 60%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+
+}
+.LroundedTop p
+{
+    font-size: 1em;
+}
+.LroundedTop span
+{
+    font-size: 0.8em;
+}
+
+
+.Lrounded1
+{
+    margin-top: 20%;
+    padding-bottom:3% ;
+    /* width: fit-content; */
+    height: fit-content;
+}
+.Lrounded1 p
+{
+    font-size: 0.8em;
+    padding: 10px 10px 0px 10px;
+    word-spacing: 6px;
+    line-height: 20px;
+}
+.Lrounded2
+{
+    margin-top:40%;
+    width: fit-content;
+    height: fit-content;
+}
+.Lrounded2 p
+{
+    font-size: 0.8em;
+    padding: 5px 10px 5px 10px;
+
+}
+
+
+.Lrounded3
+{
+    /* width: fit-content; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    height: fit-content;
+    padding: 3px;
+    padding-left: 10px;
+}
+.Lrounded3 p
+{
+    font-size: 0.7em;
+}
+
+/* ----------------------------- LEFT SECTION ends ------------------------------------- */
+/* ----------------------------- MIDDLE SECTION starts ------------------------------------- */
+.secM
+{
+    border: 1px solid black;
+    height: 100%;
+    /* width: 34%;    */
+    /* ADD some CSS that the text will auto fill the width all the text should be of same width like in picture    */
+    font-size: 2.5em;
+    
+
+}
+.name span, .details span, .career span, .skill span, .tech span, .contact
+{
+    font-size: 1.3em;    
+}
+
+
+/* ----------------------------- MIDDLE SECTION end ------------------------------------- */
+/* ----------------------------- RIGHT SECTION start ------------------------------------- */
+
+.secR
+{
+    border: 1px solid black;
+    height: 100%;
+    width: 33%;
+    
+}
+.Rrounds {
+    border: 1px solid black;
+    width: 160px;
+    height: 150px;
+    margin: 10px 20px 10px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-self: end;
+    position: relative;
+}
+
+.Rrounds::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; /* Adjust the bottom position as needed */
+    left: -20px; /* Adjust this value to control the length of the point */
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 20px solid black; /* Adjust this value to control the width of the point */
+}
+
+.RroundedTop
+{
+    background: url(./MyPics/WhatsApp\ Image\ 2025-02-13\ at\ 18.58.40_f0752523.jpg);
+    display: flex;
+    justify-self: start;
+    width:150px;
+    height: 120px;
+    padding: 10px;
+    background-size: cover;
+    /* background-position:; */
+
+}
+.RroundedTop p
+{
+    font-size: 1em;
+}
+
+
+.Rrounded1
+{
+    margin-top: 20%;
+    padding-bottom:3% ;
+    width: fit-content;
+    height: fit-content;
+}
+.Rrounded1 p
+{
+    /* word-spacing: 6px; */
+    font-size: 0.8em;
+    padding: 10px 10px 0px 10px;
+    line-height: 17px;
+}
+
+
+.Rrounded2
+{
+    /* margin-right:80px; */
+    margin-top:10%;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 5px 5px 25px;
+    text-align: start;
+}
+.Rrounded2 p
+{
+    font-size: 0.7em;
+    line-height: 2;
+    margin-right: 20px;
+    /* padding: 5px 10px 5px 10px; */
+
+}
+
+
+.Rrounded3
+{
+    margin-top: 35%;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    margin-right: 65px;
+
+}
+.Rrounded3 p
+{
+    line-height: 20px;
+    font-size: 0.8em;
+}
+/* ----------------------------- RIGHT SECTION end ------------------------------------- */
+
+.ihsaan
+{
+    font-size: 1.5em;
+    transform: scaleX(1.47);
+    text-align: center;
+    line-height: 1;
+ 
+}
+.ullah
+{
+    
+    font-size: 1.8em;
+    text-align: center;
+    transform: scaleX(1.3);
+    font-weight: bold;
+    line-height: 0.8;
+    
+ 
+}
+
+.personal
+{
+    font-size: 1.5em;
+    transform: scaleX(1.07);
+    text-align: center;
+    line-height: 1;
+}
+.detail
+{
+    font-size: 1.5em;
+    line-height: 0.9;
+    text-align: center;
+    transform: scaleX(1.26);
+    font-weight: bold;
+}
+.career
+{
+    font-size: 1.7em;
+    transform: scaleX(1.26);
+    text-align: center;
+    line-height: 1;
+}
+.objective
+{
+    font-size: 1.3em;
+    transform: scaleX(1.09);
+    text-align: center;
+    font-weight: bold;
+    line-height: 0.7;
+}
+.edu
+{
+    font-size: 1.3em;
+    transform: scaleX(1.13);
+    text-align: center;
+    line-height: 1.2;
+}
+.personal1
+{
+    font-size: 1.4em;
+    transform: scaleX(1.01);
+    text-align: center;
+    line-height: 0.6;
+    font-weight: bold;
+}
+.skill
+{
+    font-size: 1.5em;
+    transform: scaleX(1.64);
+    text-align: center;
+    line-height: 1.2;
+    /* font-weight: lighte; */
+}
+.tech
+{
+    font-size: 1.3em;
+    transform: scaleX(1.14);
+    text-align: center;
+    line-height: 0.6;
+}
+.skill1
+{
+    font-size: 1.5em;
+    transform: scaleX(1.46);
+    text-align: center;
+    line-height: 1.2;
+    font-weight: bold;
+}
+.contact
+{
+    font-size: 1.3em;
+    transform: scaleX(2);
+    text-align: center;
+    line-height: 0.6;
+}
+.touch
+{
+    font-size: 1.4em;
+    transform: scaleX(1.54);
+    text-align: center;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.stars {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+  }
+  
+  .stars:before {
+    content: '\f005 \f005 \f005 \f005 \f005'; /* 5 star icons */
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, gold calc(var(--rating) * 10%), gray calc(var(--rating) * 10%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
