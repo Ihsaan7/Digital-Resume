@@ -1,26 +1,45 @@
-*{
+
+  :root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f5f6fa;
+    --text-color: #2c3e50;
+    --transition-time: 0.3s;
+}
+
+ *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: all var(--transition-time) ease;
 }
+
 
 body
 {
-    background-color: aqua;
+    background-color:#18324d;
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
     
 }
 
 .container
 {
-
-    border: 1px solid black;
+    background: linear-gradient(90deg, #ff7e5f, #fef17b);
+    /* background: linear-gradient(180deg, #eb0c18b7, #42e3fffa); */
     margin: 4% auto;
+    border: 1px solid black;
     width:800px;
     height:750px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* text-align: ; */
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
 }
 
 .section
@@ -39,26 +58,44 @@ body
     /* border: 1px solid black; */
     height: 100%;
     width: 33%;
+    animation: slideInLeft 1s ease-out;
 }
 
 
-.Lrounds
-{
+.Lrounds {
     border: 1px solid black;
-    padding: 20px;
     width: 160px;
     height: 150px;
-    margin: 10px 10px 10px 20px;
+    margin: 10px 20px 10px 20px;
     border-top-left-radius: 20px;
-    border-top-right-radius: -10px;
     border-bottom-right-radius: 20px;
     display: flex;
     justify-self: end;
-
+    position: relative;
+    /* box-shadow: 5px 5px 7px rgba(255, 241, 113, 0.959); */
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease;
+    background: linear-gradient(90deg, #f1fffe, #fddcb1);
 }
+.Lrounds:hover {
+    transform: translateX(-5px);
+}
+.Lrounds::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -20px; 
+    width: 0;
+    height: 0;
+    border-top: 1px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 20px solid #29231c; 
+}
+
+
+
 .LroundedTop
 {
-    /* margin-left: 60%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,30 +114,32 @@ body
 }
 
 
+
 .Lrounded1
 {
-    /* padding-bottom:3% ; */
-    padding: 5px;
     margin-top: 20%;
-    width: fit-content;
+    padding-bottom:3% ;
     height: fit-content;
 }
 .Lrounded1 p
 {
-    font-size: 0.9em;
+    font-size: 0.8em;
     padding: 10px 10px 0px 10px;
     word-spacing: 6px;
     line-height: 20px;
 }
+
+
 .Lrounded2
 {
-    margin-top:50%;
+    right: 5px;
+    margin-top:40%;
     width: fit-content;
     height: fit-content;
 }
 .Lrounded2 p
 {
-    font-size: 0.7em;
+    font-size: 0.8em;
     padding: 5px 10px 5px 10px;
 
 }
@@ -108,55 +147,34 @@ body
 
 .Lrounded3
 {
-    margin-top: 15%;
+    display: flex;
     width: fit-content;
+    flex-direction: column;
+    margin-top: 10%;
     height: fit-content;
-    padding: 7px;
+    padding: 10px;
+    padding-left: 10px;
+    right: 3px;
 }
 .Lrounded3 p
 {
-    font-size: 0.8em;
+    word-spacing: 4px;
+    line-height: 1.5;
+    font-size: 0.7em;
 }
+
 
 /* ----------------------------- LEFT SECTION ends ------------------------------------- */
 /* ----------------------------- MIDDLE SECTION starts ------------------------------------- */
 .secM
 {
-    /* font-family: "Oswald", serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal; */
-    /* border: 1px solid black; */
-    /* width: 34%;    */
-    /* ADD some CSS that the text will auto fill the width all the text should be of same width like in picture    */
-    /* height: 100%;
-    font-size: 2.5em;
-    text-align: center;
-    border: 1px solid black; */
-    border: 1px solid black;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around; /* Distributes the space between elements */
-    align-items: center; /* Centers the elements horizontally */
-    padding: 10px; /* Adjust the padding as needed */
-    text-align:     
-
+    font-size: 2.5em;
+    animation: fadeIn 1.2s ease-out;
 }
-
-.name , .detail , .career , .skill , .tech , .contact
-{
-    
-        font-size: 2.5em;
-        width: 100%
-}
-
 .name span, .details span, .career span, .skill span, .tech span, .contact
 {
-
-    
-        font-size: 1.5em;
-        width: 100%
+    font-size: 1.3em;    
 }
 
 
@@ -165,35 +183,53 @@ body
 
 .secR
 {
-    /* border: 1px solid black; */
     height: 100%;
     width: 33%;
-    
+    animation: slideInRight 1s ease-out;
 }
-.Rrounds
-{
-    /* padding: 20px; */
+
+
+
+.Rrounds {
     border: 1px solid black;
     width: 160px;
     height: 150px;
-    margin: 10px 10px 10px 10px;
+    margin: 10px 20px 10px 20px;
     border-top-left-radius: 20px;
-    border-top-right-radius: -10px;
     border-bottom-right-radius: 20px;
     display: flex;
     justify-self: end;
-
+    position: relative;
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease;
+    background: linear-gradient(90deg,#fddcb1, #f1fffe );
 }
+.Rrounds:hover {
+    transform: translateX(5px);
+}
+.Rrounds::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -20px; 
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-right: 20px solid black; 
+}
+
+
 .RroundedTop
 {
     background: url(./MyPics/WhatsApp\ Image\ 2025-02-13\ at\ 18.58.40_f0752523.jpg);
     display: flex;
     justify-self: start;
     width:150px;
-    height: 120px;
+    height: 110px;
     padding: 10px;
     background-size: cover;
-    /* background-position:; */
 
 }
 .RroundedTop p
@@ -211,7 +247,6 @@ body
 }
 .Rrounded1 p
 {
-    /* word-spacing: 6px; */
     font-size: 0.8em;
     padding: 10px 10px 0px 10px;
     line-height: 17px;
@@ -220,30 +255,252 @@ body
 
 .Rrounded2
 {
-    margin-top:30%;
+    margin-top:10%;
+    display: flex;
+    flex-direction: column;
     width: fit-content;
     height: fit-content;
-    margin-right:80px;
+    padding: 5px 5px 5px 10px;
+    right: 17px;
+    text-align: start;
 }
 .Rrounded2 p
 {
     font-size: 0.7em;
-    padding: 5px 10px 5px 10px;
+    line-height: 1.5;
+    word-spacing: 10px;
+    margin-right: 25px;
 
 }
 
 
 .Rrounded3
 {
-    margin-top: 50%;
+    margin-top: 35%;
     width: fit-content;
     height: fit-content;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
     padding: 10px;
 }
 .Rrounded3 p
 {
-    line-height: 20px;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
+
+
+
 /* ----------------------------- RIGHT SECTION end ------------------------------------- */
+
+.secM
+{
+    /* background: linear-gradient(90deg, #ff7e5f, #feb47b); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    color: #ffffff;
+}
+
+.ihsaan
+{
+    font-size: 1.5em;
+    transform: scaleX(1.44);
+    text-align: center;
+    line-height: 1;
+    text-shadow: 1px 6px 5px #00000085;
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); */
+    /* width: fit-content; */
+}
+.ullah
+{
+    
+    text-shadow: 1px 6px 5px #00000085;
+    font-size: 1.8em;
+    text-align: center;
+    transform: scaleX(1.27);
+    font-weight: bold;
+    line-height: 0.8;
+}
+
+.personal
+{
+    color: #070707be;
+    text-shadow: 
+        1px 1px 2px #c7c6c5,  
+        4px 4px 1px #928585,  
+        2px 2px 5px #af9494;   
+    font-size: 1.5em;
+    transform: scaleX(1.03);
+    text-align: center;
+    line-height: 1;
+}
+
+.detail
+{
+    text-shadow: 1px 6px 5px #00000085;
+    font-size: 1.5em;
+    line-height: 0.9;
+    text-align: center;
+    transform: scaleX(1.26);
+    font-weight: bold;
+}
+.career
+{
+    color: #070707be;
+    text-shadow: 
+        1px 1px 2px #c7c6c5,  
+        4px 4px 1px #928585,  
+        2px 2px 5px #af9494;  
+    font-size: 1.7em;
+    transform: scaleX(1.26);
+    text-align: center;
+    line-height: 1;
+}
+.objective
+{
+    text-shadow: 1px 6px 5px #00000085;
+    font-size: 1.3em;
+    transform: scaleX(1.09);
+    text-align: center;
+    font-weight: bold;
+    line-height: 0.7;
+}
+.edu
+{
+    color: #faba31ea;
+    text-shadow: 
+        1px 1px 2px #c7c6c5,  
+        4px 4px 1px #928585,  
+        2px 2px 5px #af9494;  
+    font-size: 1.3em;
+    transform: scaleX(1.13);
+    text-align: center;
+    line-height: 1.2;
+}
+.personal1
+{
+    text-shadow: 1px 6px 5px #00000085;
+    font-size: 1.4em;
+    transform: scaleX(1.1);
+    text-align: center;
+    line-height: 0.6;
+    /* font-weight: bold; */
+}
+.skill
+{
+    color: #070707be;
+    text-shadow: 
+        1px 1px 2px #c7c6c5,  
+        4px 4px 1px #928585,  
+        2px 2px 5px #af9494;  
+    font-size: 1.5em;
+    transform: scaleX(1.64);
+    text-align: center;
+    line-height: 1.2;
+    /* font-weight: lighte; */
+}
+.tech
+{
+    text-shadow: 1px 6px 5px #00000085;
+    font-size: 1.3em;
+    transform: scaleX(1.01);
+    text-align: center;
+    font-weight: bold;
+    line-height: 0.6;
+}
+.skill1
+{
+    color: #fada26ea;
+    text-shadow: 
+        1px 1px 2px #c7c6c5,  
+        4px 4px 1px #928585,  
+        2px 2px 5px #af9494;  
+    font-size: 1.5em;
+    transform: scaleX(1.46);
+    text-align: center;
+    line-height: 1.2;
+    font-weight: bold;
+}
+.contact
+{
+    text-shadow: 1px 6px 5px #00000085;
+    font-size: 1.3em;
+    transform: scaleX(2);
+    text-align: center;
+    line-height: 0.6;
+}
+.touch
+{
+    text-shadow: 1px 6px 5px #00000085;
+    font-size: 1.4em;
+    transform: scaleX(1.54);
+    text-align: center;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.stars {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+  }
+  
+  .stars:before {
+    content: '\f005 \f005 \f005 \f005 \f005'; /* 5 star icons */
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, rgb(212, 119, 13) calc(var(--rating) * 10%), rgb(105, 101, 101) calc(var(--rating) * 10%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@media print {
+    .container {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+    
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+} 
+
+
 
