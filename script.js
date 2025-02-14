@@ -16,3 +16,12 @@ function calculateAge() {
 }
 
 document.addEventListener('DOMContentLoaded', calculateAge);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const stars = document.querySelectorAll('.stars');
+    stars.forEach(star => {
+      const rating = star.getAttribute('data-rating');
+      star.style.setProperty('--rating', rating / 5);
+    });
+  });
+  

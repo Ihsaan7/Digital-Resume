@@ -287,14 +287,7 @@
   
   
   /* ----------------------------- RIGHT SECTION end ------------------------------------- */
-  
-  .secM
-  {
-    /* background: linear-gradient(90deg, #ff7e5f, #feb47b); */
-    /* -webkit-background-clip: text; */
-    /* -webkit-text-fill-color: transparent; */
-  }
-  
+  /* ----------------------------- MIDDLE SECTION ( TEXT ) STARTs ------------------------------------- */
   .ihsaan
   {
     font-size: 1.5em;
@@ -412,22 +405,61 @@
     font-weight: bold;
   }
   
-  .stars {
+/* ----------------------------- MIDDLE SECTION ( TEXT ) ENDS ------------------------------------- */
+/* ----------------------------- STAR STARTS ------------------------------------- */
+.stars {
     display: inline-block;
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-  }
-  
+}
+
   .stars:before {
-    content: '\f005 \f005 \f005 \f005 \f005'; /* 5 star icons */
-    letter-spacing: 3px;
-    background: linear-gradient(90deg, rgb(212, 119, 13) calc(var(--rating) * 10%), rgb(105, 101, 101) calc(var(--rating) * 10%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  
-  @keyframes fadeIn {
+      content: '\f005 \f005 \f005 \f005 \f005'; /* 5 star icons */
+      letter-spacing: 3px;
+      background: linear-gradient(90deg, rgb(212, 119, 13) calc(var(--rating) * 10%), rgb(105, 101, 101) calc(var(--rating) * 10%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+/* ----------------------------- STAR ENDS ------------------------------------- */
+/* ----------------------------- DOWNLOAD SECTION START ------------------------------------- */
+.download {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; 
+}
+
+.download button {
+    background-color: #ff942f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    border: 2px solid rgb(51, 50, 50);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.download button:hover {
+    background-color: #000000;
+    color: rgb(245, 190, 88);
+    transform: scale(1.05);
+    border: none;
+}
+
+.download button:active {
+    background-color: #030303;
+    color: rgb(245, 190, 88);
+    transform: scale(0.95);
+}
+/* ----------------------------- DOWNLOAD SECTION END ------------------------------------- */
+
+
+/* ----------------------------- ANIMATIONS STARTS ------------------------------------- */
+
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -436,9 +468,9 @@
         opacity: 1;
         transform: translateY(0);
     }
-  }
-  
-  @keyframes slideInLeft {
+}
+
+@keyframes slideInLeft {
     from {
         opacity: 0;
         transform: translateX(-50px);
@@ -447,9 +479,9 @@
         opacity: 1;
         transform: translateX(0);
     }
-  }
-  
-  @keyframes slideInRight {
+}
+
+@keyframes slideInRight {
     from {
         opacity: 0;
         transform: translateX(50px);
@@ -458,10 +490,10 @@
         opacity: 1;
         transform: translateX(0);
     }
-  }
-  
-  
-  @media print {
+}
+
+
+@media print {
     .container {
         box-shadow: none;
         margin: 0;
@@ -473,11 +505,13 @@
         animation: none !important;
         transition: none !important;
     }
-  } 
-  
-  
-  
-  .secM {
+} 
+
+/* ----------------------------- ANIMATIONS ENDS ------------------------------------- */
+
+
+/* ----------------------------- ADJUSTMENTS***** ------------------------------------- */
+.secM {
     color: var(--primary-color);
 }
 
@@ -496,8 +530,6 @@
 
 .container {
     background-color: rgb(226, 225, 225);
-    /* border-color: var(--accent-color); */
-    /* background-color: var(--background-color); */
     border: 5px solid rgb(48, 45, 39);
 }
 
