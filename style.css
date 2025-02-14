@@ -495,9 +495,9 @@
 }
 
 .container {
-    /* background-color: rgb(226, 225, 225); */
+    background-color: rgb(226, 225, 225);
     /* border-color: var(--accent-color); */
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     border: 5px solid rgb(48, 45, 39);
 }
 
