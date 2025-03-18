@@ -1,11 +1,15 @@
+
 :root {
-    --primary-color: #f5ea4d;
-    --secondary-color: #ffffff;
-    --background-color: #4a4d4e;
-    --text-color: #34495e;
-    --accent-color: #95999e;
-    --transition-time: 0.3s;
+  --star-color: #302f2a;
+  --primary-color: #272727e8;
+  --secondary-color: #b4b3a2;
+  --background-color: #f1edb285;
+  --text-color: #ffffff;
+  --accent-color: #795548;
+  --transition-time: 0.3s;
 }
+
+
   *{
     padding: 0;
     margin: 0;
@@ -17,7 +21,6 @@
   body
   {
     background-color: var(--background-color);
-    /* background: linear-gradient(90deg, #f8ed58, #a8cbd1); */
     font-family: "Oswald", serif;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -283,6 +286,10 @@
   {
     font-size: 0.9em;
   }
+  .Rounded3 i
+  {
+    color: #fffefe;
+  }
   
   
   
@@ -294,7 +301,7 @@
     transform: scaleX(1.44);
     text-align: center;
     line-height: 1;
-    text-shadow: 1px 6px 5px #00000085;
+    text-shadow: 1px 6px 5px #33242485;
 
   }
   .ullah
@@ -416,8 +423,10 @@
   .stars:before {
       content: '\f005 \f005 \f005 \f005 \f005'; /* 5 star icons */
       letter-spacing: 3px;
-      background: linear-gradient(90deg, rgb(212, 119, 13) calc(var(--rating) * 10%), rgb(105, 101, 101) calc(var(--rating) * 10%));
-      -webkit-background-clip: text;
+      background: linear-gradient(90deg, 
+      var(--secondary-color) calc(var(--rating) * 10%), 
+      #fffefe calc(var(--rating) * 10%));
+    -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 /* ----------------------------- STAR ENDS ------------------------------------- */
@@ -430,9 +439,9 @@
 }
 
 .download button {
-    background-color: #ff942f;
-    color: white;
-    border: none;
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--secondary-color);
     padding: 10px 20px;
     border-radius: 25px;
     cursor: pointer;
@@ -443,17 +452,18 @@
 }
 
 .download button:hover {
-    background-color: #000000;
-    color: rgb(245, 190, 88);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     transform: scale(1.05);
     border: none;
 }
 
 .download button:active {
-    background-color: #030303;
-    color: rgb(245, 190, 88);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     transform: scale(0.95);
 }
+
 /* ----------------------------- DOWNLOAD SECTION END ------------------------------------- */
 
 
@@ -493,57 +503,76 @@
 }
 
 
-@media print {
-    .container {
-        box-shadow: none;
-        margin: 0;
-        width: 100%;
-        height: auto;
-    }
-    
-    * {
-        animation: none !important;
-        transition: none !important;
-    }
-} 
+
 
 /* ----------------------------- ANIMATIONS ENDS ------------------------------------- */
 
 
 /* ----------------------------- ADJUSTMENTS***** ------------------------------------- */
-.secM {
-    color: var(--primary-color);
-}
 
-.ihsaan, .ullah, .detail, .objective, .tech, .touch {
-    color: var(--primary-color);
-}
+/* For color pallets just change these and button sectioin above */
 
-.personal, .career, .edu, .skill, .skill1 {
-    color: var(--secondary-color);
-}
-
-.Lrounds, .Rrounds {
-    border:1.5px solid black;
-    background-color: rgb(240, 188, 93);
+body {
+  background-color: var(--background-color);
 }
 
 .container {
-    background-color: rgb(226, 225, 225);
-    border: 5px solid rgb(48, 45, 39);
+  background-color: #ffffff8e;
+  border: 5px solid var(--primary-color);
+  box-shadow: 15px 15px 4px rgba(26, 35, 126, 0.3);
 }
 
-.stars:before {
-    background: linear-gradient(90deg, 
-        rgb(58, 55, 55) calc(var(--rating) * 10%), 
-        white calc(var(--rating) * 10%));
-    -webkit-background-clip: text;
+.Lrounds, .Rrounds {
+  border: 1.5px solid var(--primary-color);
+  background-color: #f1ec9ac0;
+  box-shadow: 5px 15px 5px rgba(26, 35, 126, 0.2);
 }
 
+.Lrounds::before {
+  border-left: 20px solid var(--primary-color);
+}
+
+.Rrounds::after {
+  border-right: 20px solid var(--primary-color);
+}
+
+.secM {
+  color: var(--primary-color);
+}
+
+.ihsaan, .ullah, .detail, .objective, .tech, .touch {
+  color: var(--primary-color);
+  text-shadow: 1px 6px 5px rgba(26, 35, 126, 0.2);
+}
+
+.personal, .career, .edu, .skill, .skill1 {
+  color: var(--secondary-color);
+  text-shadow: 6px 5px 1px rgba(26, 35, 126, 0.15);
+}
+
+
+
+
+
+
+/* -------------------------------------------- MEDIA QUERIES -------------------------------------------- */
+@media print {
+  .container {
+      box-shadow: none;
+      margin: 0;
+      width: 100%;
+      height: auto;
+  }
+  
+  * {
+      animation: none !important;
+      transition: none !important;
+  }
+} 
 @media screen and (max-width: 768px) 
 {
     .container
     {
         height: 1350px;
     }
- 
+}
